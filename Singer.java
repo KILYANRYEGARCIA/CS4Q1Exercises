@@ -1,0 +1,35 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package exer3;
+
+/**
+ *
+ * @author kilya
+ */
+public class Singer {
+    String name; 
+    int noOfPerformances;
+    double earnings;
+    Song favSong = new Song();
+    Electives favSubject = new Electives();
+    int numOfPeople; 
+    static int totalPerformances; 
+    public Singer(String name, int noOfPerformances, double earnings){
+        this.name = name;
+        this.noOfPerformances = noOfPerformances;
+        this.earnings = earnings;
+    }
+    public void performForAudience(int numOfPeople){
+        noOfPerformances = noOfPerformances + 1;
+        earnings = earnings + 100 * numOfPeople;
+        totalPerformances += noOfPerformances; 
+    }
+    public void changeFavSong() {
+        favSong.changeSong("Alumni Homecoming");
+    }
+    public int getTotalPerformances(){
+        return totalPerformances;
+    } 
+}
